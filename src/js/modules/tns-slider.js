@@ -37,23 +37,6 @@ export const tnsCarousell = () =>{
     }); 
 };
 
-
-export const tnsVertical = () =>{
-  let slider = tns({ 
-    container           : '#tnsVertical',
-    items               : 3, 
-    axis                : "vertical",
-    swipeAngle          : false,
-    speed               : 1000,
-    nav                 : false,
-    controlsText: [ 
-      '<i class="fas fa-chevron-down"></i>',
-      '<i class="fas fa-chevron-up"></i>'
-    ]
-  }); 
-};
-
-
 export const tnsSingle = () =>{
   let slider = tns({ 
     container           : '#tnsSingle',
@@ -68,31 +51,3 @@ export const tnsSingle = () =>{
     ]
   }); 
 };
-
-
-
-export const tnsSyncing = () =>{
-  let tnsSyncingFor = tns({
-    container           : "#tnsSyncingFor",
-    items               : 1,
-    mode                : 'gallery',    
-    speed               : 400,
-    navContainer        : "#tnsSyncingNav",    
-    navAsThumbnails     : true,
-    mouseDrag       : true,
-    controlsText: [ 
-      '<i class="fas fa-chevron-left"></i>',
-      '<i class="fas fa-chevron-right"></i>'
-    ],
-    responsive: {
-      640: {
-        controls        : false,
-        mouseDrag       : false,
-        
-      }
-    }
-  }); 
-
-  
-};
-

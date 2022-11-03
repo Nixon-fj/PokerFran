@@ -1,88 +1,117 @@
-.top-nav{
-	border-bottom 	: 1px solid #DFE0E0;
-	background    	: #FFF;
-	position      	: fixed;
-	top           	: 0;
-	width         	: 100%;
-	left          	: 0;
-	display 		: flex;
-	justify-content : center;
+@import '../config/vars';
+
+.top-nav {
+	background: var(--color-body-bg);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 	z-index: 4;
 
-	&__container{
-		display 		: flex;
-		justify-content : space-between;
-		height        	: var(--header-height);
+	@media (min-width: 489px) {
+		padding: 0.5rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
 		width: 100%;
 		max-width: 1200px;
 		padding: 0 15px;
+
+		@media (min-width: 641px) {
+			flex-wrap: nowrap;
+		}
 	}
 
-	&__link{
+	&__link {
 		align-self: center;
 	}
-	&__logo{
-		height: 2rem;
-		width: auto;
+
+	&__logo {
+		width: 100px;
+		height: auto;
 		display: block;
 	}
-	&__menu{
-		@include fromTo(s,l){
-			position 		: fixed;
-			padding 		: 0 10px;
-			height 			: 100vh;
-			width 			: 260px;
-			background 		: white;
-			transition 		: right .5s;
-			overflow-y 		: auto;
-			border-top 		: 1px solid #DFE0E0;
-			border-left 	: 1px solid #DFE0E0;
-			top 			: var(--header-height);
-			right 			: -260px;
+
+	&__menu {
+		@include fromTo(s, l) {
+			position: fixed;
+			padding: 0 10px;
+			height: 100vh;
+			width: 260px;
+			background: var(--color-first);
+			transition: left .5s;
+			overflow-y: auto;
+			left: -50rem;
+			top: 4rem;
+
 			&.is-active {
-				right 		: 0;
+				left: 0;
 			}
 		}
-		@include from(l){
+
+		@include from(l) {
 			align-self: center;
 			margin: 0;
 			padding: 0;
 		}
 	}
-	&__li{
-		@include fromTo(s,l){
+
+	&__li {
+		@include fromTo(s, l) {
 			display: block;
-			border-bottom: 1px solid #DFE0E0;
 			padding: 10px 0;
 			margin: 0;
-
 		}
-		margin-left: 1em;
+		padding: 0 0.5rem 0 0;
+		border-right: 2px solid var(--color-gray-lith);
 		list-style-type: none;
 		display: inline-block;
 	}
-	&__anchor{
-		@include fromTo(s,l){
+
+	&__anchor {
+		color: var(--color-text-white);
+		text-transform: uppercase;
+		font-size: 14px;
+
+		@include fromTo(s, l) {
 			display: block;
 		}
-
+		@media (min-width: 960px) {
+			font-size: 11px;
+		}
+		&:hover{
+			text-decoration: none;
+			color: var(--color-third);
+		}
 	}
 
 	&__mb-iconMenu {
 		position: relative;
 		align-self: center;
-		top: 3px;
+		top: 0.5rem;
 		padding: 0;
-		span{
-			&.hamburger-inner{
-				background: black;
-				&::after{}
-				&::before{}
-				&::after, &::before{
-					background: black;
+
+		span {
+			&.hamburger-inner {
+				background: #fff;
+
+				&::after {}
+
+				&::before {}
+
+				&::after,
+				&::before {
+					background: #fff;
 				}
 			}
 		}
+
 		&:focus {
 			outline: 0 !important;
 			-moz-outline-style: none !important;
@@ -90,8 +119,39 @@
 			outline: 5px auto -webkit-focus-ring-color;
 			outline-offset: -2px;
 		}
-		@include from(l){
+
+		@include from(l) {
 			display: none;
+		}
+	}
+
+	// containers
+	&__container-hambuger {
+		@media screen and(max-width: 640px) {
+			padding: 0.5rem;
+			flex: 0%;
+		}
+	}
+
+	&__container-logo {
+		@media screen and(max-width: 640px) {
+			padding: 0.5rem;
+		}
+	}
+
+	&__container-menu {
+		@media screen and(max-width: 640px) {
+			flex: 0%;
+		}
+	}
+
+	&__container-btn {
+		display: flex;
+		justify-content: center;
+
+		@media screen and(max-width: 640px) {
+			padding: 0.5rem;
+			margin: 0 auto;
 		}
 	}
 

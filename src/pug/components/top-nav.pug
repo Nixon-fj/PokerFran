@@ -1,13 +1,25 @@
 nav(class='top-nav')
 	div(class='top-nav__container')
-		a(href='./', class='top-nav__link')
-			img(src='assets/img/img1.jpg', alt='', class='top-nav__logo')
-		ul(class='top-nav__menu')
-			li(class='top-nav__li'): a(href='./', 			class='top-nav__anchor') home
-			li(class='top-nav__li'): a(href='page2.html', 	class='top-nav__anchor') page2
-			li(class='top-nav__li'): a(href='page3.html', 	class='top-nav__anchor') page3
-			li(class='top-nav__li'): a(href='page4.html', 	class='top-nav__anchor') page4
-		button(type='button', class='top-nav__mb-iconMenu hamburger hamburger--slider-r')
-			span.hamburger-box
-				span.hamburger-inner
 
+		div(class="top-nav__container-hambuger")
+			button(type='button', class='top-nav__mb-iconMenu hamburger hamburger--slider-r')
+				span.hamburger-box
+					span.hamburger-inner
+
+		div(class="top-nav__container-logo")
+			a(href='./', class='top-nav__link')
+				img(src='assets/img/logo.png', alt='logo', class='top-nav__logo')
+
+		div(class="top-nav__container-menu")
+			ul(class='top-nav__menu')
+				li(class='top-nav__li'): a(href='poker.html', class='top-nav__anchor') Poker
+				li(class='top-nav__li'): a(href='promociones.html', class='top-nav__anchor') promociones
+				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') programa de lealtad
+				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') deportes
+				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') casino
+				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') banca
+				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') cksop
+		
+		div(class="top-nav__container-btn")
+			button(type='button', class='btn btn__login', href="#") Ingresar
+			button(type='button', class='btn btn__register', href="#") Registrate 

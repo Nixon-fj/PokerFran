@@ -1,0 +1,43 @@
+@import '../config/vars';
+
+.btn {
+    color: var(--color-second);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    border: none;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.300);
+    }
+
+    &__login {
+        background-color: var(--color-first);
+        border: 1px solid var(--color-second);
+        color: var(--color-second);
+    }
+
+    &__register {
+        background-color: var(--color-third);
+        border: 1px solid var(--color-third);
+        color: var(--main-color);
+
+        &:hover {
+            border: 1px solid var(--color-second);
+            background-color: #ffa719;
+        }
+    }
+
+    &__registered {
+        background-color: var(--color-third);
+        border: 1px solid var(--color-third);
+        color: var(--color-first);
+
+        &:hover {
+            border: 1px solid var(--color-second);
+            background-color: #ffa719;
+        }
+    }
+}

@@ -76,17 +76,6 @@ gulp.task('styles-build', () => {
 		.pipe(stripCssComments({
 			preserve: false
 		}))
-		// .pipe(uncss({
-		// 	html : [
-		// 		'./public/*.html'
-		// 	],
-		// 	ignore: [
-		// 		'tag.class'
-		// 	],
-		// 	ignoreSheets: [
-		// 		//
-		// 	]
-		// }))
 		.pipe(gulp.dest('./public/assets/css/'))
 });
 
@@ -212,7 +201,7 @@ gulp.task('sitemap', () => {
 		read: false
 	})
 		.pipe(sitemap({
-			siteUrl: 'https://kikeestrada.github.io/myStyleGuide/' // remplazar por tu dominio
+			siteUrl: '#' // remplazar por tu dominio
 		}))
 		.pipe(gulp.dest('./public'))
 });
@@ -222,11 +211,8 @@ gulp.task('dev', [
 	'pug-dev', 
 	'scripts-dev', 
 	'images-dev',
-	'audios-dev', 
-	'videos-dev', 
 	'fonts-dev', 
-	'manifest', 
-	'sw'
+	'manifest'
 ], () => {
 	server.init({
 		server: {
@@ -237,9 +223,8 @@ gulp.task('dev', [
 	watch('./src/scss/**/**', 		() => gulp.start('styles-dev'));
 	watch('./src/js/**/**', 		() => gulp.start('scripts-dev', server.reload));
 	watch('./src/pug/**/**', 		() => gulp.start('pug-dev', server.reload));
-	watch('./src/img/**/**', 		() => gulp.start('images-dev'))
-	watch('./src/manifest.json', 	() => gulp.start('manifest'))
-	watch('./src/sw.js', 			() => gulp.start('sw'))
+	watch('./src/img/**/**', 		() => gulp.start('images-dev'));
+	watch('./src/manifest.json', 	() => gulp.start('manifest'));
 });
 
 gulp.task('cache', () => {

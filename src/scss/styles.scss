@@ -1,8 +1,7 @@
 // Libraries
 @import "~normalize.css/normalize.css";
-@import "libraries/prism"; 
 @import "~tiny-slider/src/tiny-slider.scss";
-@import "libraries/animate";
+
 // Configuraciones
 $fractions : 1,2,3,4,5,6,7,8,9,10;
 $breakpoints 		: 
@@ -21,17 +20,14 @@ $breakpoints 		:
 @import "config/vars";
 @import "config/mixins"; 
 
-
 // LAYOUT
 // Escribe solo los estilos de layout (division en regiones del viewport)
 @import "layout/layout";
 
 // MODULES (SMACSS) O COMPONENTS (ITCSS)
-@import "components/components"; 
 
+@import 'components/components';
 
 // Utilities (hacks)
 @import "hacks/hacks";
-.banner2{
-	background: #22303a;
-}
+

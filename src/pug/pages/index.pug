@@ -1,20 +1,12 @@
 extends ../config/template
 append config
-	-currentPage		= "home"
-	-siteName			= 'Layouts' 
+	-currentPage		= "home" //name sction
+	-siteName			= 'PokerFran' //name site
 	-content			= 'content'
-	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+	-pageDescription	= 'Pagina inicial de PokerFran'
 block main-header
-	+banner(
-		"https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-		'Markdown',
-		'' 
-	)
 block main-container
-	include ../components/markdown
+	include ../components/tns-slider
+	include ../components/app-download
 block main-footer
 block scripts 
-
-
-
-

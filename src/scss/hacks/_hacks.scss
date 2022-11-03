@@ -8,39 +8,53 @@ img {
 
 // Código en línea
 :not(pre) code {
-	font-family : Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-	background  : var(--color-light);
+	font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+	background: var(--color-light);
 	color: var(--third-color);
-	padding     : 0 .25em;
-	margin      : 0 .1em;
-	word-break  : break-all;
-  }
+	padding: 0 .25em;
+	margin: 0 .1em;
+	word-break: break-all;
+}
 
-  .main-footer{	  
-	ul{
-		li{
+.main-footer {
+	ul {
+		li {
 			list-style: none;
 		}
 	}
-  }
+}
 
 a {
-	text-decoration 		: none;
-	color 				: var(--link-color);
-	transition 			: all .3s ease-out;
-  
-	&:hover { color: var(--link-hover-color); }
-  }
+	text-decoration: none;
+	color: var(--link-color);
+	transition: all .3s ease-out;
+
+	&:hover {
+		color: var(--link-hover-color);
+	}
+}
 
 ::-webkit-scrollbar {
 	display: none;
 }
 
 *:focus {
-    outline: none;
-  }
-  .no-padding{
+	outline: none;
+}
+
+.no-padding {
 	padding-left: 0;
 	padding-right: 0;
-  }
-  
+}
+
+.slider-container {
+	margin-top: 10vh;
+
+	@media (min-width: 474px) {
+		margin-top: 5vh;
+	}
+
+	@media (min-width: 641px) {
+		margin-top: 0;
+	}
+}
