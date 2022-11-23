@@ -1,0 +1,5 @@
+mixin topnavMenu(url, name)
+    li(class='top-nav__li'): a(href=`${url}`, class='top-nav__anchor')= name
+-for (var i = 0; i < topnavmenu.length; i++)
+    -var d = topnavmenu[i]
+    +topnavMenu(d.url, d.name)

@@ -1,26 +1,22 @@
 // UI
 @import "top-nav"; 
 @import "bottom-nav";
-@import "main-banner";  
-// LAYOUT
-@import "tables";
-@import "img-gallery";
-@import "youtube-video";
+
+// // LAYOUT
 @import "tabs";
-@import "accordion";
-@import "tns-slider-global"; 
+@import "accordion"; 
 @import "tns-carousell";
-@import "tns-single";
-@import "tns-vertical"; 
-@import "tns-syncing";
-@import "html5-accordion";
 
 // my components
 @import 'components/buttons';
 @import 'components/tns-slider-global';
 @import 'components/top-nav';
-@import 'components/footer';
 @import 'components/powered-jazz';
 @import 'components/infoApp';
-@import 'components/carousell-mp';
+
+// pages
 @import 'components/section-poker';
+@import 'components/section-promotions';
+@import 'components/section-casino';
+@import 'components/section-banca';
+@import './programa-lealtad';

@@ -1,0 +1,174 @@
+{
+	"topnavmenu": [
+		{
+			"url": "poker.html",
+			"name": "Poker"
+		},
+		{
+			"url": "promociones.html",
+			"name": "Promociones"
+		},
+		{
+			"url": "programa-lealtad.html",
+			"name": "Programa de lealtad"
+		},
+		{
+			"url": "deportes.html",
+			"name": "Deportes"
+		},
+		{
+			"url": "casino.html",
+			"name": "Casino"
+		},
+		{
+			"url": "banca.html",
+			"name": "Banca"
+		},
+		{
+			"url": "#",
+			"name": "Cksop"
+		}
+	],
+	"footerMenu": [
+		{
+			"footerColum": [
+				{
+					"text": "Deportes",
+					"src": "#"
+				},
+				{
+					"text": "Caballos",
+					"src": "#"
+				},
+				{
+					"text": "Registrate",
+					"src": "#"
+				},
+				{
+					"text": "Recargos y pagos",
+					"src": "#"
+				}
+			]
+		},
+		{
+			"footerColum": [
+				{
+					"text": "Acerca de nosotros",
+					"src": "#"
+				},
+				{
+					"text": "Términos y condiciones",
+					"src": "#"
+				},
+				{
+					"text": "Juego responsable",
+					"src": "#"
+				},
+				{
+					"text": "Politica de privacidad",
+					"src": "#"
+				}
+			]
+		},
+		{
+			"footerColum": [
+				{
+					"text": "Reglas de la casa",
+					"src": "#"
+				},
+				{
+					"text": "Reglas de deportes",
+					"src": "#"
+				},
+				{
+					"text": "Reglas de poker",
+					"src": "#"
+				}
+			]
+		}
+	],
+	"sliderHome": [
+		{
+			"imgdesk": "assets/img/Sliders/banner-clsop-league-1920x600.webp",
+			"imgMob": "assets/img/Sliders/banner-clsop-league-1920x600.webp"
+		},
+		{
+			"imgdesk": "assets/img/Sliders/slider03.webp",
+			"imgMob": "assets/img/Sliders/slider03.webp"
+		},
+		{
+			"imgdesk": "assets/img/Sliders/slider01.webp",
+			"imgMob": "assets/img/Sliders/slider01.webp"
+		},
+		{
+			"imgdesk": "assets/img/Sliders/banner-Road.webp",
+			"imgMob": "assets/img/Sliders/banner-Road.webp"
+		}
+	],
+	"casinoImages": [
+		{
+			"img": "assets/img/Casino-en-vivo/01.jpg",
+			"title": "CARIBBEAN STUD POKER"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/02.jpg",
+			"title": "RULETA"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/03.jpg",
+			"title": "CRAPS"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/04.jpg",
+			"title": "SLOTS"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/05.jpg",
+			"title": "BLACKJACK"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/06.jpg",
+			"title": "BACCARRAT"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/07.jpg",
+			"title": "PAI GOW"
+		},
+		{
+			"img": "assets/img/Casino-en-vivo/08.jpg",
+			"title": "VIDEO POKER"
+		}
+	],
+	"carouselmp": [
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		},
+		{
+			"img": "assets/img/Banking/dolar.png"
+		}
+	]
+}

@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://kikeestrada.github.io/myStyleGuide/</loc>
-        <lastmod>2020-05-09T18:34:20.453Z</lastmod>
+        <loc>#/banca.html</loc>
+        <lastmod>2022-11-22T15:58:41.917Z</lastmod>
+    </url>
+    <url>
+        <loc>#/casino.html</loc>
+        <lastmod>2022-11-22T15:58:42.000Z</lastmod>
+    </url>
+    <url>
+        <loc>#/deportes.html</loc>
+        <lastmod>2022-11-22T15:58:42.096Z</lastmod>
+    </url>
+    <url>
+        <loc>#/</loc>
+        <lastmod>2022-11-22T16:11:00.712Z</lastmod>
+    </url>
+    <url>
+        <loc>#/poker.html</loc>
+        <lastmod>2022-11-22T15:58:42.113Z</lastmod>
+    </url>
+    <url>
+        <loc>#/programa-lealtad.html</loc>
+        <lastmod>2022-11-22T15:58:42.157Z</lastmod>
+    </url>
+    <url>
+        <loc>#/promociones.html</loc>
+        <lastmod>2022-11-22T15:58:42.165Z</lastmod>
+    </url>
+    <url>
+        <loc>#/reglasDeportes.html</loc>
+        <lastmod>2022-11-22T15:58:42.180Z</lastmod>
     </url>
 </urlset>

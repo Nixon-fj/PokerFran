@@ -1,25 +1,14 @@
 nav(class='top-nav')
 	div(class='top-nav__container')
-
-		div(class="top-nav__container-hambuger")
-			button(type='button', class='top-nav__mb-iconMenu hamburger hamburger--slider-r')
-				span.hamburger-box
-					span.hamburger-inner
-
-		div(class="top-nav__container-logo")
-			a(href='./', class='top-nav__link')
-				img(src='assets/img/logo.png', alt='logo', class='top-nav__logo')
-
-		div(class="top-nav__container-menu")
-			ul(class='top-nav__menu')
-				li(class='top-nav__li'): a(href='poker.html', class='top-nav__anchor') Poker
-				li(class='top-nav__li'): a(href='promociones.html', class='top-nav__anchor') promociones
-				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') programa de lealtad
-				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') deportes
-				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') casino
-				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') banca
-				li(class='top-nav__li'): a(href='#', class='top-nav__anchor') cksop
-		
-		div(class="top-nav__container-btn")
-			button(type='button', class='btn btn__login', href="#") Ingresar
-			button(type='button', class='btn btn__register', href="#") Registrate 
+		a(href='./', class='top-nav__link')
+			picture
+				source(media="(min-width: 350px)", srcset="assets/img/logo.png")
+				img(src='assets/img/logo.png', alt='logo', class='top-nav__logo' width="209" height="58")
+		ul(class='top-nav__menu')
+			include ../config/mixins/mixin-topnav
+		div(class='top-nav__btn')
+			a(class='btn btn__login' href='#' id='btnlogin') Ingresar
+			a(class='btn btn__register' href='registrarse.html') Registrarse
+		button(type='button', class='top-nav__mb-iconMenu hamburger hamburger--slider-r' aria-label="hamburger")
+			span.hamburger-box
+				span.hamburger-inner

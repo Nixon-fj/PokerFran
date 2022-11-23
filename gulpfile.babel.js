@@ -83,7 +83,7 @@ gulp.task('pug-dev', () =>
 	gulp.src('./src/pug/pages/**/*.pug')
 		.pipe(plumber())
 		.pipe(data(function(file) {
-			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/example.json`))
+			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/data.json`))
 		}))
 		.pipe(pug({
 			pretty: true,
@@ -96,7 +96,7 @@ gulp.task('pug-build', () =>
 	gulp.src('./src/pug/pages/**/*.pug')
 		.pipe(plumber())
 		.pipe(data(function(file) {
-			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/example.json`))
+			return 	JSON.parse(fs.readFileSync(`${dir.src}/data/data.json`))
 		}))
 		.pipe(pug({
 			basedir: './src/pug'

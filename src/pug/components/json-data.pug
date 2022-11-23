@@ -1,7 +1,7 @@
 mixin card(cardImage, cardTitle)
-	div
-		img(src=cardImage, style='width:100px')
+	div(class="ed-item s-1 m-50 l-25")
+		img(src=cardImage)
 		p=cardTitle
--for (var i = 0; i < casos.length; i++)
-	-var caso = casos[i]
+-for (var i = 0; i < casinoImages.length; i++)
+	-var caso = casinoImages[i]
 	+card(caso.img, caso.title)

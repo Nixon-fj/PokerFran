@@ -1,43 +1,44 @@
-@import '../config/vars';
+@import "../config/vars";
 
 .btn {
-    color: var(--color-second);
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
+    background-color: var(--color-black);
     border-radius: 5px;
+    border: 1px solid var(--color-black);
+    padding: 0.5rem;
     margin: 0 0.5rem;
-    border: none;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.300);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-white);
+    @media (min-width: 425px) {
+        font-size: 13px;
+        padding: 0.5rem 1rem;
     }
-
+    @media (min-width: 1024px) {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+    }
     &__login {
-        background-color: var(--color-first);
-        border: 1px solid var(--color-second);
-        color: var(--color-second);
+        border: 1px solid var(--color-orange);
     }
-
     &__register {
-        background-color: var(--color-third);
-        border: 1px solid var(--color-third);
-        color: var(--main-color);
-
-        &:hover {
-            border: 1px solid var(--color-second);
-            background-color: #ffa719;
+        color: var(--color-black);
+        background-color: var(--color-orange);
+    }
+    &__registered {
+        padding: 1rem 4rem;
+        font-weight: bold;
+        font-size: 22px;
+        color: var(--color-black);
+        background-color: var(--color-orange);
+        &:hover{
+            text-decoration: none;
+            color: var(--color-black);
+            background-color: var(--color-white);
         }
     }
-
-    &__registered {
-        background-color: var(--color-third);
-        border: 1px solid var(--color-third);
-        color: var(--color-first);
-
-        &:hover {
-            border: 1px solid var(--color-second);
-            background-color: #ffa719;
-        }
+    &__banca{
+        text-align: center;
+        background-color: var(--color-dark);
+        border: 1px solid var(--color-gray-lith);
     }
 }

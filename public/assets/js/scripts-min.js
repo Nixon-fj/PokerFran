@@ -3998,32 +3998,58 @@ var tns = exports.tns = function tns(options) {
 };
 
 },{"./helpers/addCSSRule.js":1,"./helpers/addClass.js":2,"./helpers/addEvents.js":3,"./helpers/arrayFromNodeList.js":4,"./helpers/caf.js":5,"./helpers/calc.js":6,"./helpers/checkStorageValue.js":7,"./helpers/createStyleSheet.js":9,"./helpers/events.js":11,"./helpers/extend.js":12,"./helpers/forEach.js":13,"./helpers/getAttr.js":14,"./helpers/getCssRulesLength.js":16,"./helpers/getEndProperty.js":17,"./helpers/getSlideId.js":18,"./helpers/getTouchDirection.js":19,"./helpers/has3DTransforms.js":20,"./helpers/hasAttr.js":21,"./helpers/hasClass.js":22,"./helpers/hideElement.js":23,"./helpers/isVisible.js":25,"./helpers/jsTransform.js":26,"./helpers/mediaquerySupport.js":27,"./helpers/percentageLayout.js":29,"./helpers/raf.js":30,"./helpers/removeAttrs.js":31,"./helpers/removeCSSRule.js":32,"./helpers/removeClass.js":33,"./helpers/removeEvents.js":34,"./helpers/setAttrs.js":36,"./helpers/setLocalStorage.js":38,"./helpers/showElement.js":39,"./helpers/toDegree.js":40,"./helpers/whichProperty.js":41}],43:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var accordion = function accordion() {
+    var d = document,
+        acc = document.getElementsByClassName("accordion-container__btn-acc");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+};
+
+exports.default = accordion;
+
+},{}],44:[function(require,module,exports){
 'use strict';
 
-var _topNav = require('./modules/topNav');
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var tabs = function tabs() {
+    var d = document,
+        tabs = Array.prototype.slice.apply(d.querySelectorAll('.tabs-container__tab')),
+        panels = Array.prototype.slice.apply(d.querySelectorAll('.tabs-container__panel'));
 
-var _topNav2 = _interopRequireDefault(_topNav);
+    d.getElementById('tabs').addEventListener('click', function (e) {
+        if (e.target.classList.contains('tabs-container__tab')) {
+            var i = tabs.indexOf(e.target);
+            tabs.map(function (tab) {
+                return tab.classList.remove('is-active');
+            });
+            tabs[i].classList.add('is-active');
+            panels.map(function (tab) {
+                return tab.classList.remove('is-active');
+            });
+            panels[i].classList.add('is-active');
+        }
+    });
+};
 
-var _tnsSlider = require('./modules/tns-slider');
+exports.default = tabs;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(function () {
-	(0, _topNav2.default)();
-	(0, _tnsSlider.tnsCarousell)();
-
-	if (document.body.classList.contains('home')) {
-
-		(0, _tnsSlider.tnsSingle)();
-	} else if (document.body.classList.contains('page2')) {
-		// functions here
-		searchFilter();
-	} else if (document.body.classList.contains('page3')) {
-		// functions here
-	}
-})();
-
-},{"./modules/tns-slider":44,"./modules/topNav":45}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4040,28 +4066,24 @@ var tnsCarousell = exports.tnsCarousell = function tnsCarousell() {
     slideBy: 1,
     swipeAngle: false,
     speed: 400,
-    edgePadding: 40,
     nav: false,
     mouseDrag: true,
     controlsText: ['<i class="tns-carousell__prev fas fa-chevron-left"></i>', '<i class="tns-carousell__next fas fa-chevron-right"></i>'],
     responsive: {
-      480: {
-        items: 2
-      },
-      640: {
-        items: 3
-      },
-      800: {
+      320: {
         items: 4
       },
-      960: {
-        items: 5
-      },
-      1120: {
+      640: {
         items: 6
       },
-      1280: {
-        items: 7
+      920: {
+        items: 8
+      },
+      1080: {
+        items: 9
+      },
+      1200: {
+        items: 10
       }
     }
   });
@@ -4073,13 +4095,15 @@ var tnsSingle = exports.tnsSingle = function tnsSingle() {
     items: 1,
     slideBy: 1,
     speed: 1000,
+    autoplay: true,
+    autoplayButtonOutput: false,
     mode: 'gallery',
     mouseDrag: true,
     controlsText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
   });
 };
 
-},{"../../../node_modules/tiny-slider/src/tiny-slider":42}],45:[function(require,module,exports){
+},{"../../../node_modules/tiny-slider/src/tiny-slider":42}],46:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4097,6 +4121,37 @@ var topNav = function topNav() {
 
 exports.default = topNav;
 
-},{}]},{},[43]);
+},{}],47:[function(require,module,exports){
+'use strict';
+
+var _topNav = require('./components/topNav');
+
+var _topNav2 = _interopRequireDefault(_topNav);
+
+var _tnsSlider = require('./components/tns-slider');
+
+var _tabs = require('./components/tabs');
+
+var _tabs2 = _interopRequireDefault(_tabs);
+
+var _accordion = require('./components/accordion');
+
+var _accordion2 = _interopRequireDefault(_accordion);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+	(0, _topNav2.default)();
+	(0, _tnsSlider.tnsCarousell)();
+	if (document.body.classList.contains('home')) {
+		(0, _tnsSlider.tnsSingle)();
+	} else if (document.body.classList.contains('Banca')) {
+		(0, _tabs2.default)();
+	} else if (document.body.classList.contains('ReglasDeportes')) {
+		(0, _accordion2.default)();
+	}
+})();
+
+},{"./components/accordion":43,"./components/tabs":44,"./components/tns-slider":45,"./components/topNav":46}]},{},[47]);
 
 //# sourceMappingURL=scripts-min.js.map
