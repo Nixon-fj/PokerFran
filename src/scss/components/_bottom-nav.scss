@@ -11,6 +11,9 @@
 	@media (min-width:640px) {
 		&__ul{
 			text-align: center;
+			li{
+				line-height: 35px;
+			}
 		}
 	}
 	&__anchor {

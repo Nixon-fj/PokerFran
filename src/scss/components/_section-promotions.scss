@@ -8,7 +8,7 @@
         width: 80%;
         max-width: 1200px;
         @media (min-width: 640px) {
-            width: 50%;
+            width: 40%;
         }
     }
     &__title{
@@ -22,7 +22,6 @@
     }
     &__img{
         margin: 0 auto;
-        max-width: 100%;
         height: auto;
     }
     &__button{

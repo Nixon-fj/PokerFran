@@ -9,6 +9,11 @@
     font-size: 14px;
     font-weight: bold;
     color: var(--color-white);
+    &:hover {
+        text-decoration: none;
+        color: var(--color-black);
+        background-color: var(--color-white);
+    }
     @media (min-width: 425px) {
         font-size: 13px;
         padding: 0.5rem 1rem;
@@ -19,26 +24,51 @@
     }
     &__login {
         border: 1px solid var(--color-orange);
+        &:hover {
+            background-color: var(--color-black);
+            color: var(--color-orange);
+        }
     }
     &__register {
         color: var(--color-black);
         background-color: var(--color-orange);
     }
     &__registered {
-        padding: 1rem 4rem;
+        padding: 0.5rem 2rem;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 18px;
         color: var(--color-black);
         background-color: var(--color-orange);
-        &:hover{
-            text-decoration: none;
-            color: var(--color-black);
-            background-color: var(--color-white);
+    }
+    @media (min-width: 920px) {
+        &__registered {
+        padding: 1rem 4rem;
+        font-size: 22px;
         }
     }
-    &__banca{
+    &__banca {
         text-align: center;
         background-color: var(--color-dark);
         border: 1px solid var(--color-gray-lith);
+    }
+    &__promo{
+        width: 100%;
+        position: absolute;
+        bottom: 0rem;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+        background-color: var(--color-orange);
+        border-radius: 0;
+    }
+    @media (min-width: 420px) {
+        &__promo{
+        padding: 0.2rem;
+        }
+    }
+    @media (min-width: 960px) {
+        &__promo{
+        padding: 0.5rem;
+        }
     }
 }

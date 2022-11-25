@@ -28,6 +28,7 @@ body {
 	display        		: flex;
 	flex-direction 		: column;
 	overflow-x 			: hidden;
+	color				: var(--color-text-white);
 }
 .main-footer {
 	background 			: var(--color-first);

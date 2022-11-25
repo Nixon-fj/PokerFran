@@ -51,7 +51,7 @@
                         <li class="top-nav__li"><a class="top-nav__anchor" href="deportes.html">Deportes</a></li>
                         <li class="top-nav__li"><a class="top-nav__anchor" href="casino.html">Casino</a></li>
                         <li class="top-nav__li"><a class="top-nav__anchor" href="banca.html">Banca</a></li>
-                        <li class="top-nav__li"><a class="top-nav__anchor" href="#">Cksop</a></li>
+                        <li class="top-nav__li"><a class="top-nav__anchor" href="http://clsop.com/">Clsop</a></li>
           </ul>
           <div class="top-nav__btn"><a class="btn btn__login" href="#" id="btnlogin">Ingresar</a><a class="btn btn__register" href="registrarse.html">Registrarse</a></div>
           <button class="top-nav__mb-iconMenu hamburger hamburger--slider-r" type="button" aria-label="hamburger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
@@ -99,6 +99,32 @@
       </section>
     </main>
     <footer class="main-footer">
+      <section class="modal-login" id="modal-login">
+        <div class="login"> <a class="login__close" href="#"></a>
+          <div class="login__content">
+            <div class="login__content__header">
+              <h1 class="login__content__header__title">INGRESAR</h1><a class="login__content__header__text" href="#">O iniciar registrate</a>
+            </div>
+            <form name="LoginForm" action="javascript:void(0)" onsubmit="BackEndLogin(this); return false">
+              <div class="login__content__form">
+                <label class="login__content__form__label" for="username">Nombre de usuario</label>
+                <input class="login__content__form__input form-control" type="text" placeholder="Usuario o email" name="username" required>
+                <label class="login__content__form__label" for="password">Contraseña</label>
+                <input class="login__content__form__input form-control" type="password" placeholder="Contraseña" name="password" required>
+                <div class="text-center mt-2"><small class="text-danger" name="msj_error_lg"></small></div>
+                <div class="modal-login__forgot-pass"><a href="https://betslip.pokerfran.com/home/reset-pass">¿Olvidó su contraseña?</a></div>
+                <div class="login__content__form__checkbox">
+                  <input type="checkbox" name="terminos" value="true">
+                  <p class="login__content__form__text">Recordar Contraseña</p>
+                </div>
+                <button class="btn btn__registro" name="btn-login" type="submit">INGRESAR</button>
+                <input type="hidden" name="BackEndUrl" value="https://betslip.pokerfran.com">
+              </div>
+            </form>
+          </div>
+        </div>
+        <script src="https://images.betimages.com/Betslip/js/quick.login.min.js"></script>
+      </section>
       <section class="slider-container">
         <div class="tns-carousell" id="tnsCarousell">
                     <div>
@@ -136,21 +162,21 @@
       <nav class="bottom-nav">
         <div class="bottom-nav__container ed-grid s-grid-1 m-grid-3">
           <ul class="s-cols-1 bottom-nav__ul">
-            <li><a class="bottom-nav__anchor" href="#">Deportes</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Caballos</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Registrate</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Recargos y pagos</a></li>
+            <li><a class="bottom-nav__anchor" href="deportes.html">Deportes</a></li>
+            <li><a class="bottom-nav__anchor" href="caballos.html">Caballos</a></li>
+            <li><a class="bottom-nav__anchor" href="registrarse.html">Registrate</a></li>
+            <li><a class="bottom-nav__anchor" href="banca.html">Recargos y pagos</a></li>
           </ul>
           <ul class="s-cols-1 bottom-nav__ul">
-            <li><a class="bottom-nav__anchor" href="#">Acerca de nosotros</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Términos y condiciones</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Juego responsable</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Politica de privacidad</a></li>
+            <li><a class="bottom-nav__anchor" href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a class="bottom-nav__anchor" href="terminos.html">Términos y condiciones</a></li>
+            <li><a class="bottom-nav__anchor" href="juegoresponsable.html">Juego responsable</a></li>
+            <li><a class="bottom-nav__anchor" href="privacidad.html">Politica de privacidad</a></li>
           </ul>
           <ul class="s-cols-1 bottom-nav__ul">
-            <li><a class="bottom-nav__anchor" href="#">Reglas de la casa</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Reglas de deportes</a></li>
-            <li><a class="bottom-nav__anchor" href="#">Reglas de poker</a></li>
+            <li><a class="bottom-nav__anchor" href="reglas-casa.html">Reglas de la casa</a></li>
+            <li><a class="bottom-nav__anchor" href="reglas-deportes.html">Reglas de deportes</a></li>
+            <li><a class="bottom-nav__anchor" href="reglas-poker.html">Reglas de poker</a></li>
           </ul>
         </div>
       </nav>
